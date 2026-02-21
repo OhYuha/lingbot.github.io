@@ -266,3 +266,131 @@ footer {
         margin-top: 50px;
     }
 }
+/* --- 명령어 페이지 전용 디자인 --- */
+
+.page-header {
+    text-align: center;
+    padding: 150px 10% 50px;
+    background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+}
+
+.commands-content {
+    padding: 80px 10%;
+    background-color: var(--bg-dark);
+}
+
+.category-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+.command-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.command-card {
+    background-color: var(--bg-darker);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.command-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.cmd-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cmd-header h3 code {
+    background-color: rgba(88, 101, 242, 0.2);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-family: monospace;
+}
+
+.badge.admin {
+    background-color: #ED4245; /* 디스코드 레드 */
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.cmd-desc {
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.cmd-options {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cmd-options h4 {
+    margin-bottom: 10px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.cmd-options ul {
+    list-style: none;
+}
+
+.cmd-options li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+.opt-name {
+    font-family: monospace;
+    background-color: #333;
+    padding: 3px 6px;
+    border-radius: 4px;
+    color: var(--highlight);
+}
+
+.req {
+    color: #ED4245;
+    font-size: 0.8rem;
+}
+
+.opt {
+    color: var(--text-gray);
+    font-size: 0.8rem;
+}
+
+/* 모바일 대응 추가 */
+@media (max-width: 768px) {
+    .command-grid {
+        grid-template-columns: 1fr;
+    }
+}
